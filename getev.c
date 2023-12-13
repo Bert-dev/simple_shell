@@ -1,4 +1,7 @@
 #include "shell.h"
+#include <strings.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * get_environ - returns the string array copy of environ

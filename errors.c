@@ -1,4 +1,7 @@
 #include "shell.h"
+#include <strings.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 /**
  * _putsfd - prints an input string

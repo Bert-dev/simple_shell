@@ -1,4 +1,7 @@
 #include "shell.h"
+#include <strings.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * _myhelp - changes the current directory

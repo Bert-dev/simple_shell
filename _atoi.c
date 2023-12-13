@@ -1,4 +1,7 @@
 #include "shell.h"
+#include <stdlib.h>
+#include <strings.h>
+#include <unistd.h>
 
 /**
  * interactive - returns true if shell is in interactive mode
