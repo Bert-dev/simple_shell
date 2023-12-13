@@ -166,7 +166,7 @@ void signintHandler(int);
 /* builtin1.c */
 int _myhistory(info_t *);
 int _myalias(info_t *);
-void set_alias(info_t *info, const char *alias);
+int set_alias(info_t *info,  char *);
 
 /* builtin.c */
 int _myexit(info_t *);
