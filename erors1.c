@@ -38,7 +38,7 @@ int _erratoi(char *s)
  * Returm: 0 on success, -1 on error
  */
 
-void print_error(info_t *info, char *estr)
+void print_error(info_t *info, char *str)
 {
 	_eputs(info->fname);
 	_eputs(": ");
@@ -92,6 +92,8 @@ int print_d(int input, int fd)
  * convert_number - converter function, a clone of itoa
  * @num:number
  * @flags: arguments flags
+ * @base: the conversion type
+ *
  * Return: string
  */
 
@@ -126,7 +128,8 @@ char *convert_number(long int num, int base, int flags)
 /**
  * remove_comments - function replaces first instance of '#' with '\0'
  * @buf: address of the string to modify
- * Retrn: Always 0
+ *
+ * Return: Always 0
  */
 
 void remove_commments(char *buf)

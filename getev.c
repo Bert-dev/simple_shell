@@ -22,6 +22,7 @@ return (info->environ);
 /**
  * _unsetenv - Remove  an env variable
  * @info: Structure containing potential arguments
+ * @var: variable to removed
  * Return: 1 on delete, 0 otherwise
  */
 
@@ -56,7 +57,7 @@ int _unsetenv(info_t *info, char *var)
  * @info: structure containing potential arguments
  * @var: string env variable property
  * @value: the string env var value
- * Return Always 0.
+ * Return: Always 0.
  */
 
 int _setenv(info_t *info, char *var, char *value)
