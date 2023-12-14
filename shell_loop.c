@@ -21,8 +21,8 @@ int hsh(info_t *info, char **av)
 		r = get_input(info);
 		if (r != -1)
 		{
-			set_info(into, av);
-			buildint_ret = find_builtin(info);
+			set_info(info, av);
+			builtint_ret = find_builtin(info);
 			if (builtin_ret == -1)
 				find_cmd(info);
 		}
@@ -32,7 +32,7 @@ int hsh(info_t *info, char **av)
 	}
 	write_history(info);
 	free_info(info, 1);
-	if (1interactive(info) && info->status)
+	if (interactive(info) && info->status)
 		exit(info->status);
 	if (builtin_ret == -2)
 	{
@@ -66,11 +66,11 @@ int find_builtin(info_t *info)
 		{NULL, NULL}
 	};
 
-	for (i = 0; builtintbl[i].type; i++)
-		if (_strcmp(info->atgv[0], builtintbl[i].type) == 0)
+	for (i = 0; builtingbl[i].type; i++)
+		if (_strcmp(info->argv[0], builtingbl[i].type) == 0)
 		{
 			info->line_count++;
-			built_in_ret = builtintbl[i].func(info);
+			built_in_ret = builtingbl[i].func(info);
 			break;
 		}
 	return (built_in_ret);

@@ -73,7 +73,6 @@ void _puts(char *str)
  */
 int _putchar(char c)
 {
-	char c;
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
 
@@ -82,7 +81,7 @@ int _putchar(char c)
 		write(1, buf, i);
 		i = 0;
 	}
-	if (C != BUF_FLUSH)
+	if (c != BUF_FLUSH)
 		buf[i++] = c;
 	return (1);
 }

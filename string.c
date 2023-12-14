@@ -10,7 +10,7 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	if (!S)
+	if (!s)
 		return (0);
 	while (*s++)
 		i++;
@@ -28,7 +28,7 @@ int _strcmp(char *s1, char *s2)
 {
 	while (*s1 && *s2)
 	{
-		if (*s1 != s2)
+		if (*s1 != *s2)
 			return (*s1 - *s2);
 		s1++;
 		s2++;

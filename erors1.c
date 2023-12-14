@@ -46,7 +46,7 @@ void print_error(info_t *info, char *str)
 	_eputs(": ");
 	_eputs(info->argv[0]);
 	_eputs(": ");
-	_eputs(estr);
+	_eputs(str);
 }
 
 /**
