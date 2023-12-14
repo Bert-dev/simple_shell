@@ -51,7 +51,7 @@ char **list_to_strings(list_t *head)
 		strs[i] = str;
 	}
 	strs[i] = NULL;
-	return (strs)'
+	return (strs);
 }
 
 /**
