@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stdlib.h>
 
 /**
  * _strcpy - copeis a string
@@ -31,14 +32,13 @@ char *_strcpy(char *dest, char *src)
 char *_strdup(const char *str)
 {
 	int length = 0;
-
-	char ret;
+        const char ret;
 
 	if (str == NULL)
 		return (NULL);
 	while (*str++)
 		length++;
-	ret =  malloc(sizeof(char) * (length + 1));
+	ret = malloc(sizeof(char) * (length + 1));
 	if (!ret)
 		return (NULL);
 	for (length++; length--;)

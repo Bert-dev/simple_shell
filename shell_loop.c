@@ -22,7 +22,7 @@ int hsh(info_t *info, char **av)
 		if (r != -1)
 		{
 			set_info(info, av);
-			builtint_ret = find_builtin(info);
+			builtin_ret = find_builtin(info);
 			if (builtin_ret == -1)
 				find_cmd(info);
 		}
@@ -36,7 +36,7 @@ int hsh(info_t *info, char **av)
 		exit(info->status);
 	if (builtin_ret == -2)
 	{
-		if (into->err_num == -1)
+		if (info->err_num == -1)
 			exit(info->status);
 		exit(info->err_num);
 	}
