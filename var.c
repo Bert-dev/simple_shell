@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <string.h>
 
 /**
  * is_chain - test if current char in buffer is a chain delimiter

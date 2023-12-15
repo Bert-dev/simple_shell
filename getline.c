@@ -1,6 +1,6 @@
 #include "shell.h"
 #include <stdlib.h>
-#include <strings.h>
+#include <string.h>
 
 /**
  * input_buf - buffers chained commands

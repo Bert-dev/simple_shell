@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#include <string.h>
 /**
  * is_cmd - determines if a file is an executable commnad
  * @info: the info struct
